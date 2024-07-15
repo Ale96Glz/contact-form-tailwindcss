@@ -57,7 +57,6 @@ function validateForm(event) {
   const consentErrorElement = document.getElementById("consentError");
   const toast = document.getElementById("toast");
 
-  // Validate that text fields are not empty
   if (firstNameInput.value.trim() === "") {
     firstNameErrorElement.textContent = "This field is required";
     firstNameInput.classList.remove("input");
