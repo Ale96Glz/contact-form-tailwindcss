@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <title>Frontend Mentor | Contact form</title>
+  </head>
+  <body
+    class="min-h-screen grid place-content-center py-16 px-4 bg-primary-green-lighter font-Karla"
+  >
+    <div class="bg-neutral-White p-6 rounded-xl relative">
+      <h1 class="text-2xl font-bold text-neutral-gray-darker">Contact Us</h1>
+      <form autocomplete="off" class="grid gap-5 md:grid-cols-2 mt-4">
+        <div class="flex flex-col gap-3">
+          <label for="firstName" class="text-neutral-gray-medium">
+            First Name <span class="text-primary-green-medium">*</span></label
+          >
+          <input type="text" id="firstName" class="input-error" />
+          <div id="firstNameError" class="text-red-500 mt-1"></div>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <label for="lastName" class="text-neutral-gray-medium">
+            Last Name <span class="text-primary-green-medium">*</span></label
+          >
+          <input type="text" id="lastName" class="input" />
+          <div id="lastNameError" class="text-red-500 mt-1"></div>
+        </div>
+
+        <div class="flex flex-col gap-3 md:col-span-2">
+          <label for="email" class="text-neutral-gray-medium">
+            Email Address
+            <span class="text-primary-green-medium">*</span></label
+          >
+          <input type="text" id="email" class="input" />
+          <div id="emailError" class="text-red-500 mt-1"></div>
+        </div>
+
+        <div class="md:col-span-2">
+          <label for="queryType" class="text-neutral-gray-medium"
+            >Query Type <span class="text-primary-green-medium">*</span></label
+          >
+          <div class="grid gap-3 md:grid-cols-2 mt-3">
+            <div class="input flex items-center gap-2 pl-6">
+              <input
+                type="radio"
+                name="queryType"
+                id="generalEnquiry"
+                value="General Enquiry"
+                class="w-5 h-5"
+              />
+              <label for="generalEnquiry" class="text-neutral-gray-medium"
+                >General Enquiry</label
+              >
+            </div>
+            <div class="input flex items-center gap-2 pl-6">
+              <input
+                type="radio"
+                name="queryType"
+                id="supportRequest"
+                value="Support Request"
+                class="w-5 h-5"
+              />
+              <label for="supportRequest" class="text-neutral-gray-medium"
+                >Support Request</label
+              >
+            </div>
+          </div>
+          <div id="queryTypeError" class="text-red-500 mt-1"></div>
+        </div>
+
+        <div class="flex flex-col gap-3 md:col-span-2">
+          <label for="message" class="text-neutral-gray-medium"
+            >Message <span class="text-primary-green-medium">*</span></label
+          >
+          <textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="3"
+            class="input"
+          ></textarea>
+          <div id="messageError" class="text-red-500 mt-1"></div>
+        </div>
+
+        <div class="md:col-span-2">
+          <input type="checkbox" name="consent" id="consent" />
+          <label for="checkbox" class="text-neutral-gray-medium"
+            >To submit this form, please consent to being contacted
+            <span class="text-primary-green-medium">*</span></label
+          >
+          <div id="consentError" class="text-red-500 mt-1"></div>
+        </div>
+
+        <div class="grid md:col-span-2">
+          <button
+            type="submit"
+            class="p-5 text-white font-bold bg-primary-green-medium rounded-lg"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+      <div
+        class="fixed top-4 left-1/2 transform -translate-x-1/2 bg-neutral-gray-darker p-3 rounded-lg text-white transition-all duration-300 ease-in-out opacity-0 pointer-events-none"
+        id="toast"
+      >
+        <h1 class="flex items-center gap-3">
+          <img
+            src="assets/images/icon-success-check.svg"
+            alt="icon-success-check"
+          />
+          Message Sent!
+        </h1>
+        <p>Thanks for completing the form. We'll be in touch soon!</p>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
